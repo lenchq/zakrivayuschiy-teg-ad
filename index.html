@@ -61,7 +61,20 @@
           </p>
         </div>
         <div class="card__actions">
-          <button class="card__icon-button" aria-label="Like"></button>
+          <button class="card__icon-button" aria-label="Like">
+            <svg
+              class="like-icon"
+              width="39"
+              height="39"
+              viewBox="0 0 39 39"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <use class="sparks" href="svg/liheartke.svg#sparks" />
+              <use class="contour" href="svg/heart.svg#contour" />
+              <use class="main-body" href="svg/heart.svg#main-body" />
+              <use class="core" href="svg/heart.svg#core" />
+            </svg>
+          </button>
           <button class="button card__like-button">
             <span class="button__text">Like</span>
           </button>
@@ -71,8 +84,8 @@
       <section class="card">
         <h2 class="card__title">1 спринт: Я — чистый лист</h2>
         <div class="card__image-container">
-          <div class="card__image truck-bright">
-            <img alt="truck" src="/images/truck.png" />
+          <div class="card__image">
+            <img alt="truck" class="truck-bright" src="/images/truck.png" />
           </div>
           <span class="card__label">&lt;/HTML&gt;</span>
         </div>
@@ -97,8 +110,8 @@
       <section class="card">
         <h2 class="card__title">1 спринт: А если не получится?</h2>
         <div class="card__image-container">
-          <div class="card__image truck-saturated">
-            <img alt="truck" src="/images/truck.png" />
+          <div class="card__image">
+            <img alt="truck" class="truck-saturated" src="/images/truck.png" />
           </div>
           <span class="card__label">&lt;css&gt;</span>
         </div>
@@ -121,8 +134,8 @@
       <section class="card">
         <h2 class="card__title">2 спринт: Погоня за идеалом</h2>
         <div class="card__image-container">
-          <div class="card__image truck-hue">
-            <img alt="truck" src="/images/truck.png" />
+          <div class="card__image">
+            <img alt="truck" class="truck-hue" src="/images/truck.png" />
           </div>
           <span class="card__label">&lt;desigions&gt;</span>
         </div>
@@ -147,8 +160,8 @@
       <section class="card">
         <h2 class="card__title">2 спринт: О тех, кто рядом</h2>
         <div class="card__image-container">
-          <div class="card__image truck-invert">
-            <img alt="truck" src="/images/truck.png" />
+          <div class="card__image">
+            <img alt="truck" class="truck-invert" src="/images/truck.png" />
           </div>
           <span class="card__label">care</span>
         </div>
@@ -174,8 +187,8 @@
       <section class="card">
         <h2 class="card__title">3 спринт: Обходные стратегии</h2>
         <div class="card__image-container">
-          <div class="card__image truck-sepia">
-            <img alt="truck" src="/images/truck.png" />
+          <div class="card__image">
+            <img alt="truck" class="truck-sepia" src="/images/truck.png" />
           </div>
           <span class="card__label">&lt;support&gt;</span>
         </div>
@@ -198,8 +211,8 @@
       <section class="card">
         <h2 class="card__title">3 спринт: Когда опускаются руки</h2>
         <div class="card__image-container">
-          <div class="card__image truck-blur">
-            <img alt="truck" src="/images/truck.png" />
+          <div class="card__image">
+            <img alt="truck" class="truck-blur" src="/images/truck.png" />
           </div>
           <span class="card__label">&lt;lifes-style: none;&gt;</span>
         </div>
@@ -224,8 +237,8 @@
       <section class="card">
         <h2 class="card__title">«Сейчас я здесь»</h2>
         <div class="card__image-container">
-          <div class="card__image truck-now">
-            <img alt="truck" src="/images/truck.png" />
+          <div class="card__image">
+            <img alt="truck" class="truck-now" src="/images/truck.png" />
           </div>
           <span class="card__label">&lt;experience&gt;</span>
         </div>
@@ -253,11 +266,40 @@
     </main>
 
     <footer class="footer">
-      <button class="button footer__save-button">
-        <span class="footer__save-icon"></span>
+      <button
+        class="button footer__save-button"
+        onclick="window['dialog'].showModal()"
+        aria-controls="dialog"
+      >
+        <span class="footer__save-icon">
+          <svg
+            class="save-button-icon"
+            width="21"
+            height="21"
+            viewBox="0 0 39 39"
+          >
+            <use href="svg/floppy.svg#icon" />
+          </svg>
+        </span>
         <span class="button__text">Сохранить на память</span>
       </button>
     </footer>
+
+    <dialog class="dialog" id="dialog">
+      <div class="dialog-container">
+        <svg class="dialog-icon" width="45" height="45" viewBox="0 0 39 39">
+          <use href="svg/floppy.svg#icon" />
+        </svg>
+        <span class="dialog-text">Вставьте дискету, чтобы продолжить</span>
+      </div>
+      <button
+        class="dialog__close-button button"
+        type="button"
+        onclick="window['dialog'].close();"
+      >
+        <span class="button__text">ОК</span>
+      </button>
+    </dialog>
 
     <script src="./scripts/like.js"></script>
   </body>

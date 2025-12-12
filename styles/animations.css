@@ -10,7 +10,7 @@
 
 */
 
-.card__like-button::before {
+.button::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -20,15 +20,15 @@
   transition: transform 0.5s ease-in-out;
 }
 
-.card__like-button:hover::before {
+.button:hover::before {
   transform: scaleX(1);
 }
 
-.card__like-button:not(:hover)::before {
+.button:not(:hover)::before {
   transform-origin: left;
 }
 
-.card__like-button {
+.button {
   position: relative;
   z-index: 1;
 }
@@ -96,12 +96,12 @@
 }
 
 .like-icon.is-liked .heart {
-  animation: heart-scale 0.3s 0.1s ease-in alternate;
+  animation: heart-scale 0.3s 0.1s steps(6) alternate;
   transform-origin: center;
 }
 
 .like-icon.is-liked .sparks {
-  animation: sparks 0.3s 0.3s ease-in alternate;
+  animation: sparks 0.3s 0.3s steps(4) alternate;
 }
 
 @keyframes heart-scale {

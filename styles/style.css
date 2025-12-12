@@ -25,7 +25,7 @@
 
   background-size: 100vw 100vh;
   /* background-size: 4px 4px; */
-  /* background-attachment: fixed; */
+  background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: 0 0;
   display: flex;
@@ -190,6 +190,7 @@
 .footer {
   display: flex;
   justify-content: center;
+  margin-top: -51px;
 }
 
 .footer__save-button {
@@ -198,6 +199,7 @@
   gap: 8px;
   padding: 15px 20px;
   position: relative;
+  fill: white;
 
   &::before {
     content: "";
@@ -258,6 +260,50 @@
 }
 .truck-now {
   filter: blur(0.1rem) hue-rotate(90deg) saturate(120%) contrast(50%);
+}
+
+.dialog {
+  flex-direction: column;
+  max-width: 353px;
+  padding: 30px 42px;
+  border: var(--border);
+  gap: 30px;
+  font-family: var(--font-accent);
+  font-size: var(--font-size-bold);
+}
+
+.dialog[open] {
+  display: flex;
+  align-self: center;
+  justify-self: center;
+  position: fixed;
+  z-index: 999;
+}
+
+.dialog::backdrop {
+  background-color: rgb(0 0 0 / 0.75);
+}
+
+.dialog-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.dialog-icon {
+  min-width: 45px;
+}
+
+.dialog-text {
+  text-transform: uppercase;
+  line-height: 150%;
+}
+
+.dialog__close-button {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  text-transform: uppercase;
 }
 
 /* Mobile */
