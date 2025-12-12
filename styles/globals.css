@@ -3,13 +3,14 @@
 Вы можете изменять этот файл или дополнять. Но скорее всего, вам это не потребуется. */
 
 *,
-*::after,
-*::before {
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
+  padding: 0;
 }
 
 h1,
@@ -30,11 +31,14 @@ a {
   color: inherit;
 }
 
-button,
-input {
-  color: currentColor;
+button {
   font-family: inherit;
-  font-size: inherit;
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
 }
 
 ul,

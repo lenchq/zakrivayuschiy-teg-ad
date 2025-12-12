@@ -1,1 +1,20 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+
+:root {
+  --font-main: "Inter", sans-serif;
+  --font-accent: "PressStart2P", monospace;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+
+  --bg-color: #fff;
+  --accent-color: #000;
+  --card-bg: #fff;
+  --border-color: #000;
+
+  --content-width: clamp(375px, 50vw, 700px);
+}
+
+.page {
+  font-family: var(--font-main);
+  font-variation-settings: "wght" var(--font-weight-normal);
+}
