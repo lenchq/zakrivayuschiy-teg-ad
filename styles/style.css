@@ -35,9 +35,7 @@
   gap: 100px;
 }
 
-/* Header */
 .header {
-  /* inline-size: var(--content-width); */
   background-color: var(--card-bg);
   border: 2px solid var(--border-color);
   display: flex;
@@ -64,7 +62,6 @@
   text-transform: uppercase;
 }
 
-/* Content */
 .content {
   display: flex;
   flex-direction: column;
@@ -80,7 +77,6 @@
   line-height: 1.17;
 }
 
-/* Card */
 .card {
   background-color: var(--card-bg);
   border: 2px solid var(--border-color);
@@ -174,7 +170,6 @@
   }
 }
 
-/* Button */
 .button {
   font-family: var(--font-accent);
   font-size: 14px;
@@ -186,7 +181,6 @@
   transition: box-shadow 0.3s ease;
 }
 
-/* Footer */
 .footer {
   display: flex;
   justify-content: center;
@@ -306,7 +300,6 @@
   text-transform: uppercase;
 }
 
-/* Mobile */
 @media (width <= 375px) {
   .page {
     padding-block: 100px;
